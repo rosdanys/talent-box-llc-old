@@ -4,7 +4,7 @@ import Header from '../components/layout/Header.astro';
 import BackToTop from '../components/layout/BackToTop.astro';
 import MadeWithButton from '../components/layout/MadeWithButton.astro';
 import { ViewTransitions } from 'astro:transitions';
-
+import "aos/dist/aos.css"; // AOS styles
 interface Props {
   description: string;
   title: string;
@@ -122,6 +122,10 @@ const { description, title, image } = Astro.props;
       import "../scripts/scrolltop.js";
       import "../scripts/scrollmenu.js";
       import "../scripts/testimonial.js";
+      import { aosInit } from "../utils/aos.js";
+
+    // runs on initial page load
+    aosInit();
     </script>
   </body>
 </html>
