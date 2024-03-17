@@ -3,6 +3,7 @@ import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import BackToTop from '../components/layout/BackToTop.astro';
 import MadeWithButton from '../components/layout/MadeWithButton.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   description: string;
@@ -27,6 +28,7 @@ const { description, title, image } = Astro.props;
     <meta property="og:image" content={image} />
     <meta property="twitter:image" content={image} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="dark">
     <Header />
@@ -57,8 +59,17 @@ const { description, title, image } = Astro.props;
       }
 
       .sticky-header #navbarCollapse li > a {
-        @apply text-dark dark:text-[#fb713b] hover:text-[#f2782c] dark:hover:text-[[#f2782c]] hover:opacity-100;
+        @apply text-dark dark:text-[#fb713b] hover:text-[#f2782c] dark:hover:text-[[#f2782c]];
       }
+
+      .sticky-header #navbarCollapse li > a:hover {
+       --tw-scale-x: 1.1;
+       --tw-scale-y: 1.1;
+       transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+       transition-timing-function: cubic-bezier(.4,0,.2,1); 
+       transition-duration: .3s;
+      }
+
       #navbarCollapse li .ud-menu-scroll.active {
         @apply opacity-70;
       }
