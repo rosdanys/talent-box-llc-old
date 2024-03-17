@@ -49,7 +49,7 @@ const testimonials = [
   <div class="container px-4">
     <div class="flex flex-wrap justify-center -mx-4">
       <div class="w-full px-4">
-        <div class="mx-auto mb-[60px] max-w-[485px] text-center">
+        <div class="mx-auto mb-[60px] max-w-[485px] text-center" data-aos="fade-in">
           <span class="block mb-2 text-lg font-semibold text-primary">
             Testimonials
           </span>
@@ -71,7 +71,7 @@ const testimonials = [
         <div class="swiper-wrapper">
           {
             testimonials.map((testimonial) => (
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-aos="fade-in">
                 <div class="shadow-testimonial bg-white dark:bg-dark rounded-xl py-[30px] px-4 sm:px-[30px]" data-wow-delay=".1s">
                   <div class="flex items-center gap-[2px] mb-[18px]">
                     {[...Array(5)].map(() => (
