@@ -42,6 +42,7 @@ module.exports = {
           8: "#E5E7EB",
         },
         primary: "#fb713b",
+        "btn-hover-dark": "#2e3542",
         "blue-dark": "#1B44C8",
         secondary: "#13C296",
         "body-color": "#637381",

@@ -28,7 +28,7 @@ const { description, title, image } = Astro.props;
     <meta property="og:image" content={image} />
     <meta property="twitter:image" content={image} />
     <title>{title}</title>
-    <ViewTransitions />
+    <!-- <ViewTransitions /> -->
   </head>
   <body class="dark">
     <Header />
@@ -114,6 +114,7 @@ const { description, title, image } = Astro.props;
       }
 
     </style>
+    
     <script>
       import "../scripts/stickymenu.js";
       import "../scripts/dropdown.js";
