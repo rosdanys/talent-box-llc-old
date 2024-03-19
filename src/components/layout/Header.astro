@@ -5,33 +5,44 @@ const menuitems = [
     path: "/",
   },
   {
-    title: "About",
-    path: "/about",
+    title: "About Talent Box",
+    path: "javascript:void(0)",
+    children: [
+      { title: "Leadership- Jeanna and Michael bios", path: "/about" },
+      { title: "Our Culture", path: "/pricing" },
+      { title: "Diversity, Equity & Inclusion (DEI)", path: "/contact" }
+    ],
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Services",
+    path: "javascript:void(0)",
+    children: [
+      { title: "Recruitment Process Outsourcing-(RPO)", path: "/about" },
+      { title: "Executive and Professional Search", path: "/pricing" },
+      { title: "Talent Strategy Services", path: "/contact" }
+    ],
+  },
+  {
+    title: "Industries or Expertise",
+    path: "javascript:void(0)",
+    children: [
+      { title: "Healthcare", path: "/about" },
+      { title: "Banking and Financial Services", path: "/pricing" },
+      { title: "Pharma Manufacturing", path: "/contact" },
+      { title: "Data Analytics, Engineering, and Technology", path: "/contact" }
+    ],
+  },{
+    title: "Talent",
+    path: "javascript:void(0)",
+    children: [
+      { title: "Secure Talent", path: "/about" },
+      { title: "Get Hired", path: "/pricing" },
+      { title: "Find Your Opportunity", path: "/contact" }
+    ],
   },
   {
     title: "Contact",
     path: "/contact",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Pages",
-    path: "javascript:void(0)",
-    children: [
-      { title: "About Page", path: "/about" },
-      { title: "Pricing Page", path: "/pricing" },
-      { title: "Contact Page", path: "/contact" },
-      { title: "Blog Grid Page", path: "/blog" },
-      { title: "Sign Up Page", path: "/signup" },
-      { title: "Sign In Page", path: "/signin" },
-      { title: "404 Page", path: "/404" },
-    ],
   },
 ];
 ---
@@ -92,7 +103,7 @@ const menuitems = [
                     )
                   }
                 
-               /*    if(item.children) {
+                  if(item.children) {
                     return (
                       <li class="submenu-item group relative">
                         <a
@@ -125,7 +136,7 @@ const menuitems = [
                         </div>
                       </li>
                     )
-                  } */
+                  }
                 })
               }
             </ul>
