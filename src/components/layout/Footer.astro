@@ -13,83 +13,88 @@ publishedBlogEntries.sort(function (a, b) {
 
 const footerLinks = [
   {
-    header: 'About Us',
+    header: 'About Talent Box',
     links: [
       {
-        name: 'Home',
+        name: 'Leadership- Jeanna and Michael bios',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Features',
+        name: 'Our Culture',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'About',
-        href: '/',
-        isExternal: false,
-      },
-      {
-        name: 'Testimonial',
+        name: 'Diversity, Equity & Inclusion (DEI)',
         href: '/',
         isExternal: false,
       },
     ],
   },
   {
-    header: 'Features',
+    header: 'Services',
     links: [
       {
-        name: 'How it works',
+        name: 'Recruitment Process Outsourcing-(RPO)',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Privacy policy',
+        name: 'Executive and Professional Search',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Terms of Service',
-        href: '/',
-        isExternal: false,
-      },
-      {
-        name: 'Refund policy',
+        name: 'Talent Strategy Services',
         href: '/',
         isExternal: false,
       },
     ],
   },
   {
-    header: 'Our Products',
+    header: 'Industries or Expertise',
     links: [
       {
-        name: 'Lineicons',
-        href: 'https://lineicons.com/',
-        isExternal: true,
+        name: 'Healthcare',
+        href: '/',
+        isExternal: false,
       },
       {
-        name: 'TailAdmin',
-        href: 'https://tailadmin.com/',
-        isExternal: true,
+        name: 'Banking and Financial Services',
+        href: '/',
+        isExternal: false,
       },
       {
-        name: 'TailGrids',
-        href: 'https://tailgrids.com/',
-        isExternal: true,
+        name: 'Pharma Manufacturing',
+        href: '/',
+        isExternal: false,
       },
       {
-        name: 'UIdeck',
-        href: 'https://uideck.com/',
-        isExternal: true,
+        name: 'Data Analytics, Engineering, and Technology',
+        href: '/',
+        isExternal: false,
       },
     ],
-  },
-  {
-    header: 'Latest blog',
-    links: [],
+  },{
+    header: 'Talent',
+    links: [
+      {
+        name: 'Secure Talent',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Get Hired',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Find Your Opportunity',
+        href: '/',
+        isExternal: false,
+      },
+    ],
   },
 ];
 ---
@@ -199,7 +204,7 @@ const footerLinks = [
           </ul>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
         <div class="mb-10 w-full">
           <h4 class="mb-9 text-lg font-semibold text-white">{footerLinks[2].header}</h4>
           <ul>
@@ -222,27 +227,26 @@ const footerLinks = [
           </ul>
         </div>
       </div>
-      <div class="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
+      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
         <div class="mb-10 w-full">
           <h4 class="mb-9 text-lg font-semibold text-white">{footerLinks[3].header}</h4>
-          <ul class="flex flex-col gap-8">
-            {
-              publishedBlogEntries.slice(0, 2).map((blogPostEntry, index) => (
-                <li>
-                  <a class="group flex items-center gap-[22px]" href={`/blog/${blogPostEntry.slug}`}>
-                    <div class="overflow-hidden rounded max-w-[70px] w-full max-h-12 h-full">
-                      <img
-                        src={blogPostEntry.data.image.src}
-                        alt={blogPostEntry.data.image.alt}
-                      />
-                    </div>
-                    <span class="max-w-[180px] text-gray-7 text-base group-hover:text-white">
-                      {blogPostEntry.data.title.slice(0, 35)} ...
-                    </span>
-                  </a>
-                </li>
-              ))
-            }
+          <ul>
+            {footerLinks[3].links.map(link => {
+              if('name' in link) {
+                return (
+                  <li>
+                    <a
+                      href={link.href}
+                      class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                      target={link.isExternal ? '_blank' : undefined}
+                      rel={link.isExternal ? 'noopener' : undefined}
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                );
+              }
+            })}
           </ul>
         </div>
       </div>
