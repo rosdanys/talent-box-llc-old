@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Breadcrumb from '../components/layout/Breadcrumb.astro';
+import OurTeam from '../components/OurTeam.astro'
 ---
 <Layout
   description="Play Astro is a free and open-source Astro template, built for startups, SaaS companies, apps, businesses, and more."
@@ -9,6 +10,9 @@ import Breadcrumb from '../components/layout/Breadcrumb.astro';
 <Breadcrumb>
   <Fragment slot="title">Leadership</Fragment>
 </Breadcrumb>
+
+<OurTeam />
+
 
 <section class="not-prose relative dark:bg-dark md:-mt-[76px]">
   <div class="pointer-events-none absolute inset-0" aria-hidden="true"></div><div
@@ -34,6 +38,8 @@ import Breadcrumb from '../components/layout/Breadcrumb.astro';
     </div>
   </div>
 </section>
+
+
 
 <section class="not-prose relative">
   <div class="pointer-events-none absolute inset-0 -z-[1]" aria-hidden="true">
