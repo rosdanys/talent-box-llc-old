@@ -1,0 +1,15 @@
+---
+import Breadcrumb from "../components/layout/Breadcrumb.astro"
+import Layout from '../layouts/Layout.astro'
+import Cultures from '../components/newcomponents/Cultures.astro'
+---
+<Layout
+  description="Play Astro is a free and open-source Astro template, built for startups, SaaS companies, apps, businesses, and more."
+  title="Leadership - Talent Box LLC"
+>
+<Breadcrumb>
+    <Fragment slot="title">Culture</Fragment>
+    <Fragment slot="subtitle">Great leadership orchestrates strategy with precision, nurtures <br>relationships with sincerity, and defines success through collective achievement, not individual accolades.</Fragment>
+  </Breadcrumb>
+  <Cultures/>
+</Layout>
