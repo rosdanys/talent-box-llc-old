@@ -28,11 +28,11 @@ export const FormContact = () => {
       validationSchema={validate}
       onSubmit={(values) => {
         console.log(values);
-        SendEmail(values)
-      /*   fetch('/api/contact', {
+        
+        fetch('/api/contact', {
           method: 'POST',
           body: values,
-        }).then((res) => res.json().then((data)=>console.log(data))); */
+        }).then((res) => res.json().then((data)=>console.log(data)));
       }}
     >
       {(formik) => (

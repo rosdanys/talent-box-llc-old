@@ -1,7 +1,10 @@
 import type { APIRoute } from "astro";
+import SendEmail from "../../services/sendmail";
 
 export const POST: APIRoute = async ({ request }) => {
-  const data = await request.formData();
+
+  SendEmail(request)
+  /* const data = await request.formData();
   const name = data.get("fullname");
   const email = data.get("email");
   const phone = data.get("phone");
@@ -14,7 +17,7 @@ export const POST: APIRoute = async ({ request }) => {
       }),
       { status: 400 }
     );
-  }
+  } */
   // Do something with the data, then return a success response
   return new Response(
     JSON.stringify({
