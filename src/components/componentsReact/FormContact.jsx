@@ -29,10 +29,7 @@ export const FormContact = () => {
       onSubmit={(values) => {
         console.log(values);
 
-        fetch('/api/contact', {
-          method: 'GET',
-          body: values,
-        }).then((res) => res.json().then((data) => console.log(data)));
+        fetch('/api/contact').then((res) => res.json().then((data) => console.log(data)));
       }}
     >
       {(formik) => (
