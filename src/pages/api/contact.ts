@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import SendEmail from "../../services/sendmail";
 
-export const POST: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async ({ request }) => {
 
   SendEmail(request)
   /* const data = await request.formData();
