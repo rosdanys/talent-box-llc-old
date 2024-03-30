@@ -3,7 +3,7 @@ import SendEmail from "../../services/sendmail";
 
 export const GET: APIRoute = async ({ request }) => {
 
-  SendEmail(request)
+  // SendEmail(request)
   /* const data = await request.formData();
   const name = data.get("fullname");
   const email = data.get("email");
