@@ -3,13 +3,13 @@
 
 import { Resend } from 'resend';
 
-const resend = new Resend(import.meta.env.PUBLIC_APIKEY);
+const resend = new Resend('re_LZGAqKTA_PhqU7BL52xZc7PUEmQ5S4dbF');
 
 export default function SendEmail (data) {
     resend.emails.send({
-        from: 'rosdanysramirez@gmail.com',
+        from: 'onboarding@resend.dev',
         to: 'rosdanys@gmail.com',
-        subject: 'Prueba 00',
+        subject: 'Prueba 01',
         html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
       });
 
